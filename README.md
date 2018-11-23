@@ -1,6 +1,8 @@
 # html-jtoast-notifications
 A local popup notification plugin library, like toast(), that only uses HTML5, CSS3, and javascript
 
+`JToast` is a self-contained Javascript library object
+
 
 [\[LIVE DEMO\]](http://codesnippets.altervista.org/examples/html5/tutorial-toast/) - [\[BLOG\]]()
 
@@ -12,8 +14,8 @@ A local popup notification plugin library, like toast(), that only uses HTML5, C
   - [extinguish()](#extinguish)
   - [Why two (2) `timeout`](#timeout)
 - [Examples](#examples)
-  - [toast()](#fire)
-  - [alert()](#alert)
+  - [toast.fire()](#fire)
+  - [alert() style](#alert)
 - [Attributes in the CSS](#attrib)
 
 ## <a name=synopsis>Synopsis</a> ##
@@ -26,7 +28,7 @@ The notification is initially hidden and not visible. Once `fire()` is called, t
 
 There are five (5) methods for this library. If you need it quick, just used `fire()` or `extinguish()`. For more grainular control, there is `init()` and `message()`.
 
-The notification can be customized via `init()` and `message()`. The purpose of `fire()` is to make a notification visible, and with `extinguish()` the notification becomes hidden. You should not have to use `toggle()`.
+The notification can be customized via `init()` and `message()`. The purpose of `fire()` is to make a notification visible, and with `extinguish()` the notification becomes hidden. You should not have to use `flip()`.
 
 method         |  purpose
 ---------------|-----------
@@ -34,14 +36,14 @@ method         |  purpose
 `message()`    | set the text and *class* to the message
 `fire()`       | launch the message &ndash; making it visible
 `extinguish()` | manually halt the message &ndash; making it hidden
-`toggle()`     | actually make the notifications visible and hidden
+`flip()`       | actually make the notifications visible and hidden
 
 **How the methods work**
 
 If you look at the code, this is the sequence:
 
-- `fire()` &mdash;> `init()` &mdash;> `message()` &mdash;> `toggle()`
-- `extinguish()` &mdash;> `init()` &mdash;> `message()` &mdash;> `toggle()`
+- `fire()` &mdash;> `init()` &mdash;> `message()` &mdash;> `flip()`
+- `extinguish()` &mdash;> `init()` &mdash;> `message()` &mdash;> `flip()`
 
 What may not be evident is that the calls are scoping. Meaning you can call
 
@@ -56,7 +58,7 @@ Accepts a JSON with the following parameters:
 - `id` - element `id` of the &lt;div&gt; you are using. *Defaults to 'jtoast'.*
 - `timeout` - the amount of time to display the notification (in milliseconds) before fading out. If set to zero ('0'=string), then it never fades.  *Defaults to 7000 (milliseconds - 7 seconds).*
 
-### `toggle()` ###
+### `flip()` ###
 NO parameters.
 
 ### <a name=message>`message(json)`</a> ###
@@ -82,13 +84,17 @@ If you look closely, you will notice `timeout` mentioned twice. In one case, `ti
 
 With `fire()`, the `timeout` is the \*time\* before the notification starts to fade. If you do not set the `timeout`, it defaults to 7000 milliseconds (7 seconds). If you set `timeout='0'` (zero as a string), then it \*never fades\*.
 
-With `extinguish()`, the `timeout` is still the \*time\* before the notification starts to fade. However, if you do *not* give a \*timeout\* then the notification immediately starts to fade.  If you set `timeout='0'` (zero as a string), then it \*immediately fades\*. CAVEAT: DO NOT USE BOTH `timeout` WITH `extinguish()`, WIERD THINGS CAN HAPPEN.
+With `extinguish()`, the `timeout` is still the \*time\* before the notification starts to fade. However, if you do *not* give a \*timeout\* then the notification immediately starts to fade.  If you set `timeout='0'` (zero as a string), then it \*immediately fades\*. CAVEAT: DO NOT USE *BOTH* `timeout`s WITH `extinguish()`, WIERD THINGS CAN HAPPEN.
 
 In summation, there are two (2) different `timeout` because each one behaves differently. In one case, it is the time to automatic "fade out". In the other case, it does the same. However, if you fail to set `timeout` or you use `timeout='0'`, then it behaves differently in both cases. This is why it is separate.
 
+To be clear &ndash; with `fire()`, using the *default* the fadeout is 7000 milliseconds (7 seconds). With `extinguish()`, using the *default* the fadeout is immediate.
+
 ## <a name=examples>Examples</a> ##
 
-### <a name=toast>toast()</a> ###
+### <a name=toast>toast.fire()</a> ###
+
+------
 
 **HTML**
 
@@ -102,7 +108,10 @@ In summation, there are two (2) different `timeout` because each one behaves dif
 
 Calls `jtoast.fire()` with a *message*. It will "fade out" after the default `timeout`. Use `jtoast.init()` to change the `timeout`.
 
-### <a name=alert>alert()</a> ###
+
+### <a name=alert>alert() style</a> ###
+
+------
 
 **HTML**
 

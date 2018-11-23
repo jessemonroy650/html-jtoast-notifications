@@ -37,27 +37,28 @@ var jtoast = {
     fire : function (obj) {
         // Set the message
         if (obj) { jtoast.message(obj); }
-        jtoast.toggle();        
+        jtoast.flip();        
     },
     extinguish : function (obj, timeout) {
         // change the message, if we have a new one.
         if (obj) { jtoast.message(obj); }
         // remove from screen, after timeout
         if (timeout) {
-            setTimeout(function () { jtoast.toggle(); }, timeout);
+            setTimeout(function () { jtoast.flip(); }, timeout);
         } else {
-            jtoast.toggle();
+            jtoast.flip();
         }
     },
     //
     // This function deals with the visibility and fading.
     //
-    toggle : function () {
+    flip : function () {
         jtoast.obj = document.getElementById(jtoast.id);
         if (jtoast.visible === 0) {
             jtoast.obj.style.transitionProperty = 'opacity';
             jtoast.obj.style.opacity = 1;
             jtoast.obj.style.visibility = 'visible';
+            // keep track of what we did
             jtoast.visible = 1;
             jtoast.once    = 1;
         } else {
@@ -67,6 +68,7 @@ var jtoast = {
             jtoast.obj.style.opacity = 0;
             // Without this, the popup invisibly blocks what is underneath
             jtoast.obj.style.visibility = 'collapse';
+            // keep track of what we did
             jtoast.visible = 0;
             jtoast.once    = 0;
         }
@@ -74,9 +76,9 @@ var jtoast = {
         // This allows a single message that fades after timeout, like toast().
         if (jtoast.timeout > 0) {
             if (jtoast.once > 0) {
-                setTimeout(jtoast.toggle, jtoast.timeout);
+                setTimeout(jtoast.flip, jtoast.timeout);
             }
         }
-        console.log('jtoast.toggle:', jtoast.visible);
+        console.log('jtoast.flip:', jtoast.visible);
     }
 };

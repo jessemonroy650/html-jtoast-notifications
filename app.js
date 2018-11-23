@@ -31,9 +31,11 @@ var app = {
 var examples = {
 
     makeToast : function () {
-        //return;
+        // setup the fadeout time
         jtoast.init({'timeout':3000});
+        // update a message in the popup box
         app.showIt('timeouttime', parseInt(jtoast.timeout/1000));
+        // show the message
         jtoast.fire();
     },
     //
@@ -51,7 +53,7 @@ var examples = {
             jtoast.fire({
                'id':'alert',
                'timeout':8000,
-               'message':'This is another messge.<br><br>This works the with <u>HTML</u> <b>inside</b> it.',
+               'message':'This is another messge. <img src=dialog-error.png><br><br>This works the with <u>HTML</u> <b>inside</b> it.',
                'class':'custom',
             });
         });
