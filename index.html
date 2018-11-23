@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>JToast Test</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="jtoast.css" />
+    <link rel="stylesheet" href="app.css" />
+    <style></style>
+</head>
+<body>
+
+<div><button id=exitApp>exitApp</button></div>
+<div>isbrowser: <span id=isbrowser>content</span></div>
+<div>
+  &nbsp;<button id=alertButton>alert style</button>
+  &nbsp;<button id=customButton>custom</button>
+</div>
+<div>debug: <span id=dbug>nothing yet</span></div>
+
+<!-- TOAST -->
+<div id=jtoast class=jtoast>
+This is a popup message goes away after <span id=timeouttime></span> seconds.
+</div>
+
+<!-- ALERT -->
+<div id=alert class=jtoast></div>
+
+<!-- CONTENT -->
+<div class="loremipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+<div class="copyright">
+    <span id=copyright>Created by Jesus Monroy, Jr. &copy; 2018</span>
+</div>
+</body>
+    <script type="text/javascript" charset="utf-8" src="jtoast.js"></script>
+    <script type="text/javascript" charset="utf-8" src="app.js"></script>
+</html>

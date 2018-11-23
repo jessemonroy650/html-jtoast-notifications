@@ -1,0 +1,34 @@
+.jtoast {
+  box-sizing:border-box;  /* This allows toast, alert(), and anyone using this, to have the same size. */
+  text-align:center;
+  height:200px;
+  width:280px;
+  padding:0.2em;
+  background-color:#eeeeee; /* not quite white */
+  border:1px black solid;
+  border-radius: 0.3em;
+  /* position related */
+  position:absolute;
+  left:10px;
+  top:50px;
+  /* fade in and out */
+  opacity: 0;
+  /* WITHOUT THIS THE BUTTON UNDERNEATH IS BLOCKED */
+  visibility: collapse;
+  transition: opacity 4s ease;
+}
+.alert {
+  text-align:left;
+  color:black;
+  border:solid 2px blue;
+  border-top:solid 2em blue;
+  background-color:white;
+}
+.custom {
+  height:auto;
+  padding:0.3em;
+  text-align:justify;
+  color:black;
+  border:solid 2px #8b8b83;
+  background-color:#fffacd;
+}
