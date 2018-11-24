@@ -26,13 +26,13 @@ This library is for local notifications. It uses a `<div>` popup that gets posit
 
 The notification is initially hidden and not visible. Once `fire()` is called, the notification goes through the process of becoming visible. `extinguish()` is used to make the notification hidden and invisible again.
 
-One important note, the CSS file contains `transition: opacity 4s ease;`. It determines the total time the fade-in and fade-out take. The [transistion parameter](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) can be used with a [variety of other parameters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions). `ease` is the simplest timing parameter.
+One important note, the CSS file contains `transition: opacity 4s ease;`. It determines the total time the fade-in and fade-out take. The [transistion](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) parameter can be used with a [variety of other parameters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions). `ease` is the simplest timing parameter.
 
 W3 Schools [describes](https://www.w3schools.com/css/css3_transitions.asp) `ease` as
 
 > specifies a transition effect with a slow start, then fast, then end slowly (this is default)
 
-This CSS parameter is the most complex, but it can add quite a bit of flair to any message. I will not cover that in this article. There are plenty of articles on the Internet that describe this parameter for animation.
+The CSS `transition` parameter is complex, but it can add quite a bit of flair to any message. I will not cover that in this article. There are plenty of articles on the Internet that describe this parameter for animation.
 
 ## <a name=usage>Usage</a> ##
 
@@ -42,6 +42,22 @@ The simplest way to use *JToast* is to
 2. Add a `div` with the `id=jtoast` and the `class=jtoast`. Namely, `<div id=jtoast class=jtoast></div>`
 3. Next, add any text you wish in the `div`
 4. Call `jtoast.fire()` when the message is needed.
+
+To add your own style, create a CSS class with those style changes, and add the class to the `div` &mdash; like this:
+
+    <div id=jtoast class='jtoast myclass'></div>
+
+To create your own custom message define your CSS class and use a JSON with `fire()`
+
+```
+    jtoast.fire({
+        'id':'alert',
+        'timeout':8000,
+        'message':'This is another messge. <img src=dialog-error.png><br><br>This works the with <u>HTML</u> <b>inside</b> it.',
+        'class':'custom',
+        });
+```
+
 
 
 ## <a name=method>Methods</a> ##
