@@ -1,17 +1,17 @@
 # html-jtoast-notifications
 A local popup notification plugin library, like toast(), that only uses HTML5, CSS3, and javascript
 
-As a minimalist, I abhore large libraries to do simple things. I like the Android [library toast](https://developer.android.com/guide/topics/ui/notifiers/toasts). There is even a version by Eddie Ver Bruggen called [cordova-plugin-x-toast](https://www.npmjs.com/package/cordova-plugin-x-toast) and other simple version called [cordova-plugin-simple-toast](https://www.npmjs.com/package/cordova-plugin-simple-toast). The big draw backs include
+As a minimalist, I abhore large libraries to do simple things. I like the Android [library toast](https://developer.android.com/guide/topics/ui/notifiers/toasts). There is a version by Eddie Ver Bruggen called [cordova-plugin-x-toast](https://www.npmjs.com/package/cordova-plugin-x-toast) and other simple version called [cordova-plugin-simple-toast](https://www.npmjs.com/package/cordova-plugin-simple-toast). The big drawbacks for all these solutions include
 
-- need another plugin
+- installed as a plugin
 - inflexible time parameters
 - poor control of asthetics (colors, fonts, style, etc)
 
-Ideally with phonegap, a single-object Javascript library should be able to do the job. This is *JToast*.
+Ideally with Phonegap&trade;, a single-object Javascript library should be able to do the job. This is *JToast*.
 
-*JToast* is a single-object Javascript with multiple methods for grainular automated control. The object uses three (3) methods so that actions can be controlled via anonymous events. Those methods are `fire()`, `extinguish()`, and `flip()`. The first two (2) (`fire()` & `extinguish()`) can take parameters, but if none are given they follow the pre-assign actions (or the default action if no tasks pre-assigned). The third method (`flip()`) makes the *jtoast* appear or disappear. `flip()` is the only method that takes no parameters.
+*JToast* is a single-object Javascript with multiple methods for grainular automatation. The object uses three (3) methods so these actions can be controlled via anonymous events. Those methods are `fire()`, `extinguish()`, and `flip()`. The first two (2) (`fire()` & `extinguish()`) can take parameters, but if none are given they follow the pre-assign actions (or the default action if no tasks are pre-assigned). The third method (`flip()`) makes the *jtoast* appear or disappear. `flip()` is the only method that takes no parameters.
 
-Finer granularity is available with two additional methods (`init()` & `message()`). `init()` lets you use your own div ID and set the timeout parameter; both parameters are optional.  `message()` lets you set all the parmeters, but does not *JToast* appear or disappear (r `flip()`); all parameters are optional.
+Finer granularity is available with two additional methods (`init()` & `message()`). `init()` lets you use your own *div ID* and set the timeout parameter; both parameters are optional.  `message()` lets you set all the parmeters, but does not make *JToast* appear or disappear (`flip()`). All parameters for `message()` are optional.
 
 
 - [Synopsis](#synopsis)
@@ -40,12 +40,15 @@ method         |  purpose
 `flip()`       | actually make the notifications visible and hidden
 
 
-## Simple Example <a name=toast>toast.fire()</a> ###
+## Simple Example using <a name=toast>toast.fire()</a> ###
 
 ------
 
 **HTML**
 
+    <link rel="stylesheet" href="jtoast.css" />
+    <link rel="stylesheet" href="app.css" />
+    ::
     <div id=jtoast class=jtoast></div>
 
 **code**
@@ -54,6 +57,6 @@ method         |  purpose
 
 **explanation**
 
-Calls `jtoast.fire()` with a *message*. It will "fade out" after the default `timeout`. Use `jtoast.init()` to change the `timeout`.
+Calls `jtoast.fire()` with a *message*. It will "fade out" after the default `timeout` (7 seconds). Use `jtoast.init()` to change the `timeout`.
 
 

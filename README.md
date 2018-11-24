@@ -97,7 +97,9 @@ To be clear &ndash; with `fire()`, using the *default* the fadeout is 7000 milli
 ------
 
 **HTML**
-
+    <link rel="stylesheet" href="jtoast.css" />
+    <link rel="stylesheet" href="app.css" />
+    ::
     <div id=jtoast class=jtoast></div>
 
 **code**
@@ -106,7 +108,7 @@ To be clear &ndash; with `fire()`, using the *default* the fadeout is 7000 milli
 
 **explanation**
 
-Calls `jtoast.fire()` with a *message*. It will "fade out" after the default `timeout`. Use `jtoast.init()` to change the `timeout`.
+Calls `jtoast.fire()` with a *message*. It will "fade out" after the default `timeout` (7 seconds). Use `jtoast.init()` to change the `timeout`.
 
 
 ### <a name=alert>alert() style</a> ###
