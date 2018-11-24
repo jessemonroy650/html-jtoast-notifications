@@ -26,7 +26,7 @@ The notification is initially hidden and not visible. Once `fire()` is called, t
 
 ## <a name=method>Methods</a> ##
 
-There are five (5) methods for this library. If you need it quick, just used `fire()` or `extinguish()`. For more grainular control, there is `init()` and `message()`.
+There are five (5) methods for this library. If you need it quick, just use `fire()` or `extinguish()`. For more grainular control, there is `init()` and `message()`.
 
 The notification can be customized via `init()` and `message()`. The purpose of `fire()` is to make a notification visible, and with `extinguish()` the notification becomes hidden. You should not have to use `flip()`.
 
