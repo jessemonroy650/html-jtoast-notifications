@@ -9,13 +9,14 @@ As a minimalist, I abhore large libraries to do simple things. I like the Androi
 
 Ideally with Phonegap&trade;, a single-object Javascript library should be able to do the job. This is *JToast*.
 
-*JToast* is a single-object Javascript with multiple methods for grainular automatation. The object uses three (3) methods so these actions can be controlled via anonymous events. Those methods are `fire()`, `extinguish()`, and `flip()`. The first two (2) (`fire()` & `extinguish()`) can take parameters, but if none are given they follow the pre-assign actions (or the default action if no tasks are pre-assigned). The third method (`flip()`) makes the *jtoast* appear or disappear. `flip()` is the only method that takes no parameters.
+*JToast* is a single-object Javascript with multiple methods for grainular automatation. The object uses three (3) methods so these actions can be controlled via [parameterless event listeners](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener). Those methods are `fire()`, `extinguish()`, and `flip()`. The first two (2) (`fire()` & `extinguish()`) can take parameters, but if none are given they follow the pre-assign actions (or the default action if no tasks are pre-assigned). The third method (`flip()`) makes the *jtoast* appear or disappear. `flip()` is the only method that takes no parameters.
 
-Finer granularity is available with two additional methods (`init()` & `message()`). `init()` lets you use your own *div ID* and set the timeout parameter; both parameters are optional.  `message()` lets you set all the parmeters, but does not make *JToast* appear or disappear (`flip()`). All parameters for `message()` are optional.
+Finer granularity is available with two additional methods (`init()` & `message()`). `init()` lets you use your own *div ID* and set the *timeout parameter*; both parameters are optional.  `message()` lets you set all the parmeters, but does not make *JToast* appear or disappear; use `flip()` for that. All parameters for `message()` are optional.
 
 
 - [Synopsis](#synopsis)
 - [Methods](#methods)
+- [Usage](#usage)
 - [Simple example toast.fire()](#fire)
 
 
@@ -24,6 +25,11 @@ Finer granularity is available with two additional methods (`init()` & `message(
 This library is for local notifications. It uses a `<div>` popup that gets positioned with `postion:absolute`. The notification has only one pane, and therefore only one window for a message. This means no title or subject. Hence, the name *jtoast*.
 
 The notification is initially hidden and not visible. Once `fire()` is called, the notification goes through the process of becoming visible. `extinguish()` is used to make the notification hidden and invisible again.
+
+## <a name=usage>Usage</a> ##
+
+
+
 
 ## <a name=method>Methods</a> ##
 
@@ -38,7 +44,6 @@ method         |  purpose
 `fire()`       | launch the message &ndash; making it visible
 `extinguish()` | manually halt the message &ndash; making it hidden
 `flip()`       | actually make the notifications visible and hidden
-
 
 ## Simple Example using <a name=toast>toast.fire()</a> ###
 
