@@ -26,6 +26,14 @@ This library is for local notifications. It uses a `<div>` popup that gets posit
 
 The notification is initially hidden and not visible. Once `fire()` is called, the notification goes through the process of becoming visible. `extinguish()` is used to make the notification hidden and invisible again.
 
+One important note, the CSS file contains `transition: opacity 4s ease;`. It determines the total time the fade-in and fade-out take. The [transistion parameter](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) can be used with a [variety of other parameters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions). `ease` is the simplest timing parameter.
+
+W3 Schools [describes](https://www.w3schools.com/css/css3_transitions.asp) `ease` as
+
+> specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+
+This CSS parameter is the most complex, but it can add quite a bit of flair to any message. I will not cover that in this article. There are plenty of articles on the Internet that describe this parameter for animation.
+
 ## <a name=usage>Usage</a> ##
 
 The simplest way to use *JToast* is to 
@@ -34,12 +42,6 @@ The simplest way to use *JToast* is to
 2. Add a `div` with the `id=jtoast` and the `class=jtoast`. Namely, `<div id=jtoast class=jtoast></div>`
 3. Next, add any text you wish in the `div`
 4. Call `jtoast.fire()` when the message is needed.
-
-One important note, `transition: opacity 4s ease;` determines the total time the fade-in and fade-out take affect. The [transistion parameter](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) can be used with a [variety of other parameters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions). `ease` is the simplest timing parameter.
-
-W3 Schools describes `ease` as
-
-> specifies a transition effect with a slow start, then fast, then end slowly (this is default)
 
 
 ## <a name=method>Methods</a> ##
