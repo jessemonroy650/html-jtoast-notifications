@@ -1,7 +1,7 @@
 # html-jtoast-notifications
-A local popup notification plugin library, like toast(), that only uses HTML5, CSS3, and javascript
+A popup local-notification plugin library, like toast(), that only uses HTML5, CSS3, and javascript
 
-As a minimalist, I abhore large libraries to do simple things. I like the Android [library toast](https://developer.android.com/guide/topics/ui/notifiers/toasts). There is a version by Eddie Ver Bruggen called [cordova-plugin-x-toast](https://www.npmjs.com/package/cordova-plugin-x-toast) and other simple version called [cordova-plugin-simple-toast](https://www.npmjs.com/package/cordova-plugin-simple-toast). The big drawbacks for all these solutions include
+As a minimalist, I abhore large libraries to do simple things. I like the Android [library toast](https://developer.android.com/guide/topics/ui/notifiers/toasts). There is a similar version by *Eddie Ver Bruggen* called [cordova-plugin-x-toast](https://www.npmjs.com/package/cordova-plugin-x-toast), and other simple version called [cordova-plugin-simple-toast](https://www.npmjs.com/package/cordova-plugin-simple-toast). The big drawbacks for all these solutions include
 
 - installed as a plugin
 - inflexible time parameters
@@ -9,7 +9,7 @@ As a minimalist, I abhore large libraries to do simple things. I like the Androi
 
 Ideally with Phonegap&trade;, a single-object Javascript library should be able to do the job. This is *JToast*.
 
-*JToast* is a single-object Javascript with multiple methods for grainular automatation. The object uses three (3) methods so these actions can be controlled via [parameterless event listeners](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener). Those methods are `fire()`, `extinguish()`, and `flip()`. The first two (2) (`fire()` & `extinguish()`) can take parameters, but if none are given they follow the pre-assign actions (or the default action if no tasks are pre-assigned). The third method (`flip()`) makes the *jtoast* appear or disappear. `flip()` is the only method that takes no parameters.
+*JToast* is a single-object Javascript with multiple methods for grainular automatation. The object has three (3) methods so actions can be controlled via [parameterless event listeners](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener). Those methods are `fire()`, `extinguish()`, and `flip()`. The first two (2) (`fire()` & `extinguish()`) can take parameters, but if none are given they follow the pre-assign parameters (or the default parameters, if none are pre-assigned). The third method (`flip()`) makes the *jtoast* appear or disappear. `flip()` is the only method that takes no parameters.
 
 Finer granularity is available with two additional methods (`init()` & `message()`). `init()` lets you use your own *div ID* and set the *timeout parameter*; both parameters are optional.  `message()` lets you set all the parmeters, but does not make *JToast* appear or disappear; use `flip()` for that. All parameters for `message()` are optional.
 
@@ -46,8 +46,6 @@ method         |  purpose
 `flip()`       | actually make the notifications visible and hidden
 
 ## Simple Example using <a name=toast>toast.fire()</a> ###
-
-------
 
 **HTML**
 
