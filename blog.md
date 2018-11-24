@@ -43,7 +43,7 @@ The simplest way to use *JToast* is to
 3. Next, add any text you wish in the `div`
 4. Call `jtoast.fire()` when the message is needed.
 
-To add your own style, create a CSS class with those style changes, and add the class to the `div` &mdash; like this:
+To add your own style, create a CSS class with those style changes and add the class to the `div` &mdash; like this:
 
     <div id=jtoast class='jtoast myclass'></div>
 
@@ -58,7 +58,14 @@ To create your own custom message define your CSS class and use a JSON with `fir
         });
 ```
 
+To be clear on how to use this library, exactly four (4) things are needed. 
 
+1. The *JToast* CSS class.
+2. The *JToast* Javascript file.
+3. A *JToast* `div` entry in the HTML file; like this: `<div id=jtoast class=jtoast>Your message</div>`
+4. A call to a *JToast* method, such as: `jtoast.fire();`
+
+On the later two (2) things, for `3` the id can change and 'Your message' can change. For `4`, a variety of methods can be employed. Read the `README.md` for details.
 
 ## <a name=method>Methods</a> ##
 
@@ -79,7 +86,7 @@ method         |  purpose
 **HTML**
 
     <link rel="stylesheet" href="jtoast.css" />
-    <link rel="stylesheet" href="app.css" />
+    <script type="text/javascript" src="jtoast.js"></script>
     ::
     <div id=jtoast class=jtoast></div>
 
