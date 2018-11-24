@@ -28,7 +28,12 @@ The notification is initially hidden and not visible. Once `fire()` is called, t
 
 ## <a name=usage>Usage</a> ##
 
+The simplest way to use *JToast* is to 
 
+1. Add the CSS and Javascript to the page
+2. Add a `div` with the `id=jtoast` and the `class=jtoast`. Namely, `<div id=jtoast class=jtoast></div>`
+3. Add any text you wish in the `div`
+4. Call `jtoast.fire()`
 
 
 ## <a name=method>Methods</a> ##
