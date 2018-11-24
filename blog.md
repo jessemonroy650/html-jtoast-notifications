@@ -30,10 +30,16 @@ The notification is initially hidden and not visible. Once `fire()` is called, t
 
 The simplest way to use *JToast* is to 
 
-1. Add the CSS and Javascript to the page
+1. Add the CSS and Javascript to the HTML page
 2. Add a `div` with the `id=jtoast` and the `class=jtoast`. Namely, `<div id=jtoast class=jtoast></div>`
-3. Add any text you wish in the `div`
-4. Call `jtoast.fire()`
+3. Next, add any text you wish in the `div`
+4. Call `jtoast.fire()` when the message is needed.
+
+One important note, `transition: opacity 4s ease;` determines the total time the fade-in and fade-out take affect. The [transistion parameter](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) can be used with a [variety of other parameters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions). `ease` is the simplest timing parameter.
+
+W3 Schools describes `ease` as
+
+> specifies a transition effect with a slow start, then fast, then end slowly (this is default)
 
 
 ## <a name=method>Methods</a> ##
