@@ -65,7 +65,7 @@ To be clear on how to use this library, exactly four (4) things are needed.
 3. A *JToast* `div` entry in the HTML file; like this: `<div id=jtoast class=jtoast>Your message</div>`
 4. A call to a *JToast* method, such as: `jtoast.fire();`
 
-On the later two (2) things, for `3` the id can change and 'Your message' can change. For `4`, a variety of methods can be employed. Read the `README.md` for details.
+On the later two (2) things, for `3` the id can change and 'Your message' can change. For `4`, a variety of methods can be employed. Read the `README.md` with the source code for details.
 
 ## <a name=method>Methods</a> ##
 
