@@ -7,6 +7,7 @@ A local popup notification plugin library, like toast(), that only uses HTML5, C
 [\[LIVE DEMO\]](http://codesnippets.altervista.org/examples/html5/tutorial-toast/) - [\[Github BLOG\]](https://github.com/jessemonroy650/html-jtoast-notifications/blob/master/blog.md) - [\[Wordpress BLOG\]]()
 
 - [Synopsis](#synopsis)
+- [Usage](#usage)
 - [Methods](#methods)
   - [init()](#init)
   - [message()](#message)
@@ -24,7 +25,11 @@ This library is for local notifications. It uses a `<div>` popup that gets posit
 
 The notification is initially hidden and not visible. Once `fire()` is called, the notification goes through the process of becoming visible. `extinguish()` is used to make the notification hidden and invisible again.
 
-**USAGE** information is available in [blog.md](blog.md)
+## <a name=usage>Usage</a> ##
+
+**USAGE** information is available in quick [usage section of blog.md](blog.md#usage)
+
+Along with this section, see the files simple.html, simple.css, and simple.js.
 
 ## <a name=method>Methods</a> ##
 
