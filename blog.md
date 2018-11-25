@@ -37,7 +37,7 @@ The CSS `transition` parameter is complex, but it can add quite a bit of flair t
 
 ## <a name=usage>Usage</a> ##
 
-Along with this section, see the files simple.html, simple.css, and simple.js.
+Along with this section, see the files *simple.html, simple.css*, and *simple.js*.
 
 The simplest way to use *JToast* is to 
 
@@ -67,8 +67,6 @@ To be clear on how to use this library, exactly four (4) things are needed.
 2. The *jtoast.js* Javascript file.
 3. A *jtoast* `div` entry in the HTML file; like this: `<div id=jtoast class=jtoast>Your message</div>`
 4. A call to a *jtoast* method, such as: `jtoast.fire();`
-
-On the later two (2) things, for `3.` the id can change and 'Your message' can change. For `4.`, a variety of methods can be employed. Read the `README.md` with the source code for details.
 
 ## <a name=method>Methods</a> ##
 
