@@ -29,7 +29,7 @@ The notification is initially hidden and not visible. Once `fire()` is called, t
 
 **USAGE** information is available in quick [usage section of blog.md](blog.md#usage)
 
-Along with this section, see the files simple.html, simple.css, and simple.js.
+Along with this section, see the files *simple.html, simple.css*, and *simple.js*.
 
 ## <a name=method>Methods</a> ##
 
