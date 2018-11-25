@@ -4,7 +4,7 @@ A local popup notification plugin library, like toast(), that only uses HTML5, C
 `JToast` is a self-contained Javascript library object
 
 
-[\[LIVE DEMO\]](http://codesnippets.altervista.org/examples/html5/tutorial-toast/) - [\[Github BLOG\]](https://github.com/jessemonroy650/html-jtoast-notifications/blob/master/blog.md) - [\[Word BLOG\]]()
+[\[LIVE DEMO\]](http://codesnippets.altervista.org/examples/html5/tutorial-toast/) - [\[Github BLOG\]](https://github.com/jessemonroy650/html-jtoast-notifications/blob/master/blog.md) - [\[Wordpress BLOG\]]()
 
 - [Synopsis](#synopsis)
 - [Methods](#methods)
