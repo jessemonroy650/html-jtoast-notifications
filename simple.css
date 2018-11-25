@@ -1,0 +1,5 @@
+body {margin:0px;font-size:large;box-sizing:border-box;}
+.hidden {visibility:collapse;display:none;}
+.expose {visibility:visible;display:block;} /* Here for completeness only. */
+.loremipsum {margin:1em;}
+#jtoastButton {margin:0.2em 40%;text-align:center;}

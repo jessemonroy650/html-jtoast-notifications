@@ -28,7 +28,7 @@ The notification is initially hidden and not visible. Once `fire()` is called, t
 
 There are five (5) methods for this library. If you need it quick, just use `fire()` or `extinguish()`. For more grainular control, there is `init()` and `message()`.
 
-The notification can be customized via `init()` and `message()`. The purpose of `fire()` is to make a notification visible, and with `extinguish()` the notification becomes hidden. You should not have to use `flip()`.
+The notification can be customized via `init()` and `message()`. The purpose of `fire()` is to make a notification visible, and with `extinguish()` the notification becomes hidden. You should not have to use `flip()`, but you can in place of either `fire()` or `flip()`.
 
 method         |  purpose
 ---------------|-----------
@@ -80,13 +80,13 @@ Accepts a JSON with the following parameters:
 
 ### <a name=timeout>Why two `timeout`</a> ###
 
-If you look closely, you will notice `timeout` mentioned twice. In one case, `timeout` is listed with the JSON; so it is in the JSON given to `fire()` (et al.). In the other case, you will notice that `timeout` is separate, and given as a separate parameter to `extinguish()`.
+If you look closely, you will notice `timeout` is mentioned twice. In one case, `timeout` is listed with the JSON; so it is in the JSON given to `fire()` (et al.). In the other case with (`extinguish()`), you will notice that `timeout` is separate, and given has a separate parameter.
 
 With `fire()`, the `timeout` is the \*time\* before the notification starts to fade. If you do not set the `timeout`, it defaults to 7000 milliseconds (7 seconds). If you set `timeout='0'` (zero as a string), then it \*never fades\*.
 
 With `extinguish()`, the `timeout` is still the \*time\* before the notification starts to fade. However, if you do *not* give a \*timeout\* then the notification immediately starts to fade.  If you set `timeout='0'` (zero as a string), then it \*immediately fades\*. CAVEAT: DO NOT USE *BOTH* `timeout`s WITH `extinguish()`, WIERD THINGS CAN HAPPEN.
 
-In summation, there are two (2) different `timeout` because each one behaves differently. In one case, it is the time to automatic "fade out". In the other case, it does the same. However, if you fail to set `timeout` or you use `timeout='0'`, then it behaves differently in both cases. This is why it is separate.
+In summation, there are two (2) different `timeout` parameters because each one behaves differently. In one case, it is the time to automatic "fade out". In the other case, it does the same. However, if you fail to set `timeout` or you use `timeout='0'`, then it behaves differently in both cases. This is why it is separate.
 
 To be clear &ndash; with `fire()`, using the *default* the fadeout is 7000 milliseconds (7 seconds). With `extinguish()`, using the *default* the fadeout is immediate.
 

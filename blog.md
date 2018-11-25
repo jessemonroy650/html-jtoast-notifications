@@ -1,7 +1,7 @@
 # html-jtoast-notifications
 A popup local-notification plugin library, like toast(), that only uses HTML5, CSS3, and javascript
 
-As a minimalist, I abhore large libraries to do simple things. I like the Android [library toast](https://developer.android.com/guide/topics/ui/notifiers/toasts). There is a similar version by *Eddie Ver Bruggen* called [cordova-plugin-x-toast](https://www.npmjs.com/package/cordova-plugin-x-toast), and other simple version called [cordova-plugin-simple-toast](https://www.npmjs.com/package/cordova-plugin-simple-toast). The big drawbacks for all these solutions include
+As a minimalist, I abhore large libraries to do simple things. I like the Android [library toast](https://developer.android.com/guide/topics/ui/notifiers/toasts). There is a similar version by *Eddie Ver Bruggen* called [cordova-plugin-x-toast](https://www.npmjs.com/package/cordova-plugin-x-toast), and other simple version called [cordova-plugin-simple-toast](https://www.npmjs.com/package/cordova-plugin-simple-toast). The big drawbacks for all these solutions (originally and still) include some drawbacks.
 
 - installed as a plugin
 - inflexible time parameters
@@ -97,5 +97,4 @@ method         |  purpose
 **explanation**
 
 Calls `jtoast.fire()` with a *message*. It will "fade out" after the default `timeout` (7 seconds). Use `jtoast.init()` to change the `timeout`.
-
 
