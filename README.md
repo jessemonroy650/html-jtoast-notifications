@@ -20,9 +20,11 @@ A local popup notification plugin library, like toast(), that only uses HTML5, C
 
 ## <a name=synopsis>Synopsis</a> ##
 
-This library is for local notifications. It uses a `<div>` popup that gets positioned with `postion:absolute`. The notification has only one pane, and therefore only one window for a message. This means no title or subject. Hence, the name *jtoast*.
+This library is for local notifications. It uses a `<div>` popup that gets positioned with `postion:absolute`. The notification has only one window, and therefore only one pane for a message. This means no title or subject. Hence, the name *jtoast*.
 
 The notification is initially hidden and not visible. Once `fire()` is called, the notification goes through the process of becoming visible. `extinguish()` is used to make the notification hidden and invisible again.
+
+**USAGE** information is available in [blog.md](blog.md)
 
 ## <a name=method>Methods</a> ##
 
